@@ -3,3 +3,18 @@
 # максимальным и минимальным значением дробной части элементов.
 #  Пример:
 # [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+
+list = [1.1, 1.2, 3.1, 5, 10.01]
+
+def findDifferenceInFractionPart(numbers):
+    max = 0
+    min = 0
+    for number in numbers:
+        number = number - int(number)
+        if(number>max):
+            max = number
+        if(number<min):
+            min = number
+    return max - min
+
+print(findDifferenceInFractionPart(list))
