@@ -9,7 +9,11 @@
 
 
 
-def sumFraction(first_fr, second_fr):
+def sumFraction(first_fr: str, second_fr: str) -> str:
+    """
+    Функция, которая которая принимает две строки вида “a/b” - дробь с числителем и знаменателем и
+    и возвращает сумму дробей.
+    """
     #Берем числитель и знаменатель у обоих дробей
     slashPositionFirst = first_fr.index("/")
     firstNumerator = int(first_fr[:slashPositionFirst])

@@ -2,7 +2,10 @@
 # количество встречаемых слов и вернуть 10 самых частых.
 # Не учитывать знаки препинания и регистр символов.
 
-def countWordsInText(text):
+def countWordsInText(text: str) -> dict [str, int]:
+    """
+    Функция, которая которая принимает строку и подсчитывает количество встречаемых слов и возвращает 10 самых частых.
+    """
     text = text.lower()
     wordsList = text.replace(",", "").replace(".", "").split()
     dict_count_words = {}

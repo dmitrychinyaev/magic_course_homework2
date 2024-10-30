@@ -7,7 +7,10 @@
 # список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
 # список: [], ищем: "123", ответ: -1
 
-def findSecondPositionOfElement(list, elementToFind):
+def findSecondPositionOfElement(list , elementToFind: str) -> int:
+    """
+    Функция, которая определяет позицию второго вхождения строки в списке либо сообщит, что её нет
+    """
     if(list.count(elementToFind) < 2) or (len(list) == 0):
         return -1
     count = 0

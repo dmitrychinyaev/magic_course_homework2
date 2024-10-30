@@ -4,9 +4,12 @@
 # Для списка: [1, 2, "3", "4", True, 5.5]
 # Ответ:  {int: [1, 2, 5], float: [5.5], str: ["3", "4"], bool: [True]}
 
-listToFind = [1, 2, "3", "4", True, 5.5]
 
-def findTypeElementAndPutInArr(list):
+def findTypeElementAndPutInArr(list) -> dict:
+    """
+    Функция, которая которая принимает список содержащий элементы разных типов и получает из него словарь 
+    списков, где ключ - тип элемента, а значение - список элементов данного типа.
+    """
     #Заводим пустой словарь
     dict = {}
     for i in range (len(list)): 
@@ -20,5 +23,8 @@ def findTypeElementAndPutInArr(list):
             dict[x] = new_list
 
     return dict
+
+
+listToFind = [1, 2, "3", "4", True, 5.5]
 
 print(findTypeElementAndPutInArr(listToFind))
